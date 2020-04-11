@@ -23,6 +23,8 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="x-icon">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
 
 <body>
@@ -168,6 +170,33 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <?php include("components/init.php"); ?>
 
     <script>
+    
+        $(document).ready(function(){
+            $(".add-row").click(function(){
+                var linkValue = $("#profileLink").val();
+                var linkText = $("#profileLink option:selected").html();
+
+                var url = $("#profileURL").val();
+                var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + linkText + "</td><td>" + url + "</td></tr>";
+                $("#tblLinks tbody").append(markup);
+
+                $("#profileURL").val('');
+            });
+            
+            // Find and remove selected table rows
+            $(".delete-row").click(function(){
+                $("#tblLinks tbody").find('input[name="record"]').each(function(){
+                    if($(this).is(":checked")){
+                        $(this).parents("tr").remove();
+                    }
+                });
+            });
+            $( function() {
+                $( "#tabs" ).tabs();
+            } );
+
+        });  
+        
         $('.search-edit').popover({
             trigger: 'focus',
             placement: "top",
