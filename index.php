@@ -7,12 +7,12 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Your search for local resources">
-    <meta name="keywords" content="local services, local products, local food">
+    <meta name="description" content="search engine for accessing local resources (products and services)">
+    <meta name="keywords" content="Find local services, products, food and more">
     <meta name="author" content="ENVIENTA">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://local.envienta.com">
-    <meta property="og:title" content="Your search for local resources">
+    <meta property="og:title" content="ENVIENTA Social Matchmaker">
     <meta property="og:description" content="Find local services, products, food and more">
     <meta property="og:image" content="https://local.envienta.com/img/zoe-deal-EULcMrkoPuo-unsplash.jpg">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
