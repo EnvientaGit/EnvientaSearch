@@ -1,0 +1,14 @@
+[
+    {
+        "key": "service",
+        "title": "Szolgáltatás"
+    },
+    {
+        "key": "product",
+        "title": "Termék"
+    },
+    {
+        "key": "food",
+        "title": "Élelmiszer"
+    }
+]
