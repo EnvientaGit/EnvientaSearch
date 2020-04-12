@@ -122,15 +122,6 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
         </p>
 
 
-        <?php include("components/login-modal.php"); ?>
-
-        <?php include("components/map-target-modal.php"); ?>
-
-        <?php include("components/whoweare-modal.php"); ?>
-
-        <?php include("components/howitworks-modal.php"); ?>
-
-        <?php include("components/profile-modal.php"); ?>
 
     </main>
 
@@ -146,6 +137,16 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
         </p>
     </div>
 
+
+        <?php include("components/login-modal.php"); ?>
+
+        <?php include("components/map-target-modal.php"); ?>
+
+        <?php include("components/whoweare-modal.php"); ?>
+
+        <?php include("components/howitworks-modal.php"); ?>
+
+        <?php include("components/profile-modal.php"); ?>
 
     <script type="text/html" id="tag-template">
         <span class="badge badge-primary" style="margin-right: 0.25rem;">

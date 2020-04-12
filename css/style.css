@@ -122,6 +122,10 @@ ul.ui-autocomplete {
     border-color: black !important;
 }
 
+.modal-body {
+    font-size: 75% !important;
+}
+
 #mc_embed_signup {
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;

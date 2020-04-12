@@ -24,8 +24,8 @@ if ($path_info == '/getUserData') {
     $resource = getResourceByOwnerId($ownerId);
 
     $result = array();
-    $result['ownerId'] = $ownerId;
     if ($resource) {
+        $result['ownerId'] = $ownerId;
         $result['name'] = $resource["title"];
         $result['description'] = $resource["description"];
         $result['taglist'] = $resource["service"] ? explode(" ", trim($resource["service"])) : array();
