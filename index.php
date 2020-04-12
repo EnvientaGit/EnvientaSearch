@@ -22,7 +22,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="x-icon">
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 </head>
@@ -103,8 +103,32 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     </main>
 
     <div class="footer">
+        
+        <p>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <div id="mc_embed_signup">
+                        <form action="https://envienta.us12.list-manage.com/subscribe/post?u=1cfb2999615d57f7f085b1680&amp;id=da900f432b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                                
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1cfb2999615d57f7f085b1680_da900f432b" tabindex="-1" value=""></div>
+                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                <label for="mce-EMAIL">We're Getting Ready to Launch. Join our mailing list to stay in the loop.</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </p>
+                        
         <p>ENVIENTA @2020 All Rights reserved. | Background:
-        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@federicorespini?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Federico Respini"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Federico Respini</span></a>
+            <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@federicorespini?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Federico Respini"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
+                        <title>unsplash-logo</title>
+                        <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+                    </svg></span><span style="display:inline-block;padding:2px 3px">Federico Respini</span></a>
             <span style="display: inline-block; color:white; width: 50%; text-align: right;">
                 <a href="https://envienta.com/terms.html" target="_blank">Terms of Service </a><a href="https://envienta.com/privacy.html" target="_blank">| Private Policy</a>
             </span>
@@ -180,9 +204,8 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <?php include("components/init.php"); ?>
 
     <script>
-    
-        $(document).ready(function(){
-            $(".add-row").click(function(){
+        $(document).ready(function() {
+            $(".add-row").click(function() {
                 var linkValue = $("#profileLink").val();
                 var linkText = $("#profileLink option:selected").html();
 
@@ -192,47 +215,47 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
 
                 $("#profileURL").val('');
             });
-            
+
             // Find and remove selected table rows
-            $(".delete-row").click(function(){
-                $("#tblLinks tbody").find('input[name="record"]').each(function(){
-                    if($(this).is(":checked")){
+            $(".delete-row").click(function() {
+                $("#tblLinks tbody").find('input[name="record"]').each(function() {
+                    if ($(this).is(":checked")) {
                         $(this).parents("tr").remove();
                     }
                 });
             });
 
             $('#profileForm').submit(function(e) {
-            e.preventDefault();
-            //alert('hi');
-            //console.log($(this).serialize());
-        //     $.ajax({
-        //         type: "POST",
-        //         url: 'login.php',
-        //         data: $(this).serialize(),
-        //         success: function(response)
-        //         {
-        //             var jsonData = JSON.parse(response);
-    
-        //             // user is logged in successfully in the back-end
-        //             // let's redirect
-        //             if (jsonData.success == "1")
-        //             {
-        //                 location.href = 'my_profile.php';
-        //             }
-        //             else
-        //             {
-        //                 alert('Invalid Credentials!');
-        //             }
-        //     }
-        // });
-        });
-            $( function() {
-                $( "#tabs" ).tabs();
-            } );
+                e.preventDefault();
+                //alert('hi');
+                //console.log($(this).serialize());
+                //     $.ajax({
+                //         type: "POST",
+                //         url: 'login.php',
+                //         data: $(this).serialize(),
+                //         success: function(response)
+                //         {
+                //             var jsonData = JSON.parse(response);
 
-        });  
-        
+                //             // user is logged in successfully in the back-end
+                //             // let's redirect
+                //             if (jsonData.success == "1")
+                //             {
+                //                 location.href = 'my_profile.php';
+                //             }
+                //             else
+                //             {
+                //                 alert('Invalid Credentials!');
+                //             }
+                //     }
+                // });
+            });
+            $(function() {
+                $("#tabs").tabs();
+            });
+
+        });
+
         $('.search-edit').popover({
             trigger: 'focus',
             placement: "top",
