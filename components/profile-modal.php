@@ -1,5 +1,5 @@
 <div id="profile-modal" class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document" > 
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">ENVIENTA Profile</h5>
@@ -34,7 +34,7 @@
                                 <label for="profileEmail">Email</label>
                                 <input type="text" class="form-control" id="profileEmail">
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="profileDescription">About Me</label>
                                 <textarea class="form-control" id="profileDescription" rows="6"></textarea>
@@ -45,8 +45,8 @@
                                 <label for="profileAddress">Your location</label>
                                 <input type="text" class="form-control" id="profileAddress" aria-describedby="profileAddressHelp">
                                 <small id="profileAddressHelp" class="form-text text-muted">Start typing your address, then press ENTER to position the marker on the map. You can refine it by moving the marker.</strong></small>
-                            <div id="profile-map-canvas" class="map_canvas"></div>
-                        </div>
+                                <div id="profile-map-canvas" class="map_canvas"></div>
+                            </div>
                         </div>
                         <div id="tabs-3">
                             <div class="form-group">
@@ -58,7 +58,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="profileURL" placeholder="URL"  >
+                                <input type="text" class="form-control" id="profileURL" placeholder="URL">
                             </div>
                             <input type="button" class="add-row" value="Add Link">
                             <table id="tblLinks">
@@ -78,8 +78,8 @@
                         </div>
                         <div id="tabs-4">
                             <div class="form-group">
-                            Keywords<br />
-                            <small>You have to set at least one keyword if you want to be searchable in our local search engine.</small>
+                                Keywords<br />
+                                <small>You have to set at least one keyword if you want to be searchable in our local search engine.</small>
                             </div>
                             <?php foreach ($resource_types as $idx => $resource_type) : ?>
                                 <div class="form-group">
@@ -96,30 +96,30 @@
                             <?php endforeach; ?>
                         </div>
                         <div id="tabs-5">
-                        <div class="form-group">
+                            <div class="form-group">
                                 <label for="profileENV">ENV Wallet Address</label>
                                 <input type="text" class="form-control" id="profileENV">
-                            
-                        </div>
-                        <div class="form-group">
+
+                            </div>
+                            <div class="form-group">
                                 <label for="profileBTC">BTC Wallet Address</label>
                                 <input type="text" class="form-control" id="profileBTC">
-                            
-                        </div>
-                        <div class="form-group">
+
+                            </div>
+                            <div class="form-group">
                                 <label for="profileETH">ETH Wallet Address</label>
                                 <input type="text" class="form-control" id="profileETH">
-                            
+
+                            </div>
                         </div>
+
+
+
                     </div>
-                    
-                    
-                    
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button id="profileSaveButton" type="submit" class="btn btn-primary">Save</button>
-                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button id="profileSaveButton" type="submit" class="btn btn-primary">Save</button>
+                    </div>
             </form>
         </div>
     </div>

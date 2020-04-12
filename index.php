@@ -25,6 +25,8 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -100,34 +102,39 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
             </div>
             <div class="col-2"></div>
         </div>
+
+
+
+        <?php include("components/login-modal.php"); ?>
+
+        <?php include("components/map-target-modal.php"); ?>
+
+        <?php include("components/whoweare-modal.php"); ?>
+
+        <?php include("components/howitworks-modal.php"); ?>
+
+        <?php include("components/profile-modal.php"); ?>
+
     </main>
 
     <div class="footer">
-        
         <p>
             <div class="row" style="width: 98%; margin:auto;">
                 <div class="col-2"></div>
                 <div class="col-8">
-                    
                     <div id="mc_embed_signup">
                         <form action="https://envienta.us12.list-manage.com/subscribe/post?u=1cfb2999615d57f7f085b1680&amp;id=da900f432b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                            
                             <div id="mc_embed_signup_scroll">
+                                <label for="mce-EMAIL">We're Getting Ready to Launch. Join our mailing list to stay in the loop.</label>
                                 <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                                
                                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1cfb2999615d57f7f085b1680_da900f432b" tabindex="-1" value=""></div>
                                 <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                                <label for="mce-EMAIL">We're Getting Ready to Launch. Join our mailing list to stay in the loop.</label>
                             </div>
-                        
                         </form>
                     </div>
-                        
                 </div>
-                
             </div>
         </p>
-                        
         <p>ENVIENTA @2020 All Rights reserved. | Background:
             <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@federicorespini?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Federico Respini"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
                         <title>unsplash-logo</title>
@@ -181,20 +188,6 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
         </div>
     </script>
 
-    <?php include("components/profile-modal.php"); ?>
-
-    <?php include("components/login-modal.php"); ?>
-
-    <?php include("components/map-target-modal.php"); ?>
-
-    <?php include("components/whoweare-modal.php"); ?>
-
-    <?php include("components/howitworks-modal.php"); ?>
-
-    <?php include("components/mailchimp-modal.php"); ?>
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.loadtemplate/1.5.10/jquery.loadTemplate.min.js" integrity="sha256-mF3k3rmuuGVi/6GhJ5atwMd7JsTsQhULB6GyLaFPrMU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.js" integrity="sha256-4hWBXlNNh9SqNDfISZkwRkKlWcxb1pxQNYsAPXCpGKs=" crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAllK8G0cYz4d596TCHCEiGWbDbF6HUJ-I&sensor=false&libraries=places"></script>
