@@ -31,7 +31,6 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent fixed-top">
-        <a class="navbar-brand"><img src="img/envienta_logo.png" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -104,21 +103,6 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
             <div class="col-2"></div>
         </div>
 
-
-
-        <?php include("components/login-modal.php"); ?>
-
-        <?php include("components/map-target-modal.php"); ?>
-
-        <?php include("components/whoweare-modal.php"); ?>
-
-        <?php include("components/howitworks-modal.php"); ?>
-
-        <?php include("components/profile-modal.php"); ?>
-
-    </main>
-
-    <div class="footer">
         <p>
             <div class="row" style="width: 98%; margin:auto;">
                 <div class="col-2"></div>
@@ -136,6 +120,21 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
                 </div>
             </div>
         </p>
+
+
+        <?php include("components/login-modal.php"); ?>
+
+        <?php include("components/map-target-modal.php"); ?>
+
+        <?php include("components/whoweare-modal.php"); ?>
+
+        <?php include("components/howitworks-modal.php"); ?>
+
+        <?php include("components/profile-modal.php"); ?>
+
+    </main>
+
+    <div class="footer">
         <p>ENVIENTA @2020 All Rights reserved. | Background:
             <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@federicorespini?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Federico Respini"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
                         <title>unsplash-logo</title>
