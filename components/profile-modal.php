@@ -49,7 +49,6 @@
                         </div>
                         </div>
                         <div id="tabs-3">
-                            <form>
                             <div class="form-group">
                                 <select class="form-control" id="profileLink">
                                     <option value="1">Website</option>
@@ -62,7 +61,6 @@
                                 <input type="text" class="form-control" id="profileURL" placeholder="URL"  >
                             </div>
                             <input type="button" class="add-row" value="Add Link">
-                            </form>
                             <table id="tblLinks">
                                 <thead>
                                     <tr>
@@ -119,8 +117,8 @@
                     
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Mégsem</button>
-                    <button id="profileSaveButton" type="submit" class="btn btn-primary">Mentés</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button id="profileSaveButton" type="submit" class="btn btn-primary">Save</button>
                 </div>
             </form>
         </div>
