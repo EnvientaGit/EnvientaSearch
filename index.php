@@ -105,11 +105,13 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <div class="footer">
         
         <p>
-            <div class="row">
+            <div class="row" style="width: 98%; margin:auto;">
                 <div class="col-2"></div>
                 <div class="col-8">
+                    
                     <div id="mc_embed_signup">
                         <form action="https://envienta.us12.list-manage.com/subscribe/post?u=1cfb2999615d57f7f085b1680&amp;id=da900f432b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            
                             <div id="mc_embed_signup_scroll">
                                 <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                                 
@@ -117,8 +119,10 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
                                 <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
                                 <label for="mce-EMAIL">We're Getting Ready to Launch. Join our mailing list to stay in the loop.</label>
                             </div>
+                        
                         </form>
                     </div>
+                        
                 </div>
                 
             </div>

@@ -12,7 +12,7 @@ main {
     font-family: 'Montserrat' sans-serif;
     font-size: 22px;
     color: black;
-    min-height: 80%;
+    min-height: 78%;
 }
 
 .result-title {
@@ -155,6 +155,7 @@ ul.ui-autocomplete {
 
 #mc_embed_signup form {
     padding: 0px !important;
+    margin: 0px !important;
 }
 
 .footer {
