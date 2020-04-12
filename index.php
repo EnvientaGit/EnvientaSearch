@@ -63,6 +63,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8">
+                <img style="display: block; margin:auto; margin-bottom: 1rem;" src="img/envienta_logo.png" />
                 <!--
                 <p class="main_info">
                     We're Getting Ready to Launch.<br /> <a id="subscribe-button" href="#"> Join our mailing list </a> to stay in the loop.
@@ -88,7 +89,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
                                 <input id="<?= $resource_type->key ?>-search-input" type="text" class="form-control search-edit" placeholder="Search for local products / services (start typing a keyword)" aria-label="Start typing a keyword, then click + to add it to the list" aria-describedby="<?= $resource_type->key ?>-button-addon4" autocomplete="off">
                             </div>
                             <div style="height: 1rem;"></div>
-                            <span id="<?= $resource_type->key ?>-taglist-active"></span>
+                            <span id="<?= $resource_type->key ?>-taglist-active"></span><br/>
                             <span id="<?= $resource_type->key ?>-taglist"></span>
                             <div style="height: 1rem;"></div>
                             <div id="<?= $resource_type->key ?>-results"></div>

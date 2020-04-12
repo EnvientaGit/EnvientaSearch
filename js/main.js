@@ -28,7 +28,7 @@ function initTagSearch(key, availableTags, cb, initialTaglist) {
             if (i == tagpos && searchInput.val())
                 return { "tag": v, style: "background-color: lightGrey;" };
             return { "tag": v };
-        }).slice(0, 50));
+        }).slice(0, 20));
         $("#" + key + "-taglist > span").click(function () {
             var tag = $(this).data('tag');
             var idx = taglist.indexOf(tag);

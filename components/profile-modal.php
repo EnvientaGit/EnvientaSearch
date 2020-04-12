@@ -44,7 +44,7 @@
                             <div class="form-group">
                                 <label for="profileAddress">Your location</label>
                                 <input type="text" class="form-control" id="profileAddress" aria-describedby="profileAddressHelp">
-                                <small id="profileAddressHelp" class="form-text text-muted">Start typing your address, then press ENTER to position the marker on the map. You can refine it by moving the marker.</strong></small>
+                                <small id="profileAddressHelp" class="form-text text-muted"><strong>Start typing your address, then press ENTER to position the marker on the map. You can refine it by moving the marker.</strong></small>
                                 <div id="profile-map-canvas" class="map_canvas"></div>
                             </div>
                         </div>
