@@ -103,7 +103,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
             <div class="col-2"></div>
         </div>
 
-        <p>
+        <p style="margin-top: 8rem;">
             <div class="row" style="width: 98%; margin:auto;">
                 <div class="col-2"></div>
                 <div class="col-8">
