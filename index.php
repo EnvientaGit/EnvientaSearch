@@ -23,8 +23,8 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="x-icon">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -61,9 +61,11 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8">
+                <!--
                 <p class="main_info">
                     We're Getting Ready to Launch.<br /> <a id="subscribe-button" href="#"> Join our mailing list </a> to stay in the loop.
                 </p>
+                -->
                 <!--
                 <ul class="nav nav-pills mb-3" id="resource-pills-tab" role="tablist">
                     <?php foreach ($resource_types as $idx => $resource_type) : ?>
@@ -99,6 +101,16 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
             <div class="col-2"></div>
         </div>
     </main>
+
+    <div class="footer">
+        <p>ENVIENTA @2020 All Rights reserved. | Background:
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@federicorespini?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Federico Respini"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Federico Respini</span></a>
+            <span style="display: inline-block; color:white; width: 50%; text-align: right;">
+                <a href="https://envienta.com/terms.html" target="_blank">Terms of Service </a><a href="https://envienta.com/privacy.html" target="_blank">| Private Policy</a>
+            </span>
+        </p>
+    </div>
+
 
     <script type="text/html" id="tag-template">
         <span class="badge badge-primary" style="margin-right: 0.25rem;">
@@ -153,10 +165,8 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
 
     <?php include("components/mailchimp-modal.php"); ?>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.loadtemplate/1.5.10/jquery.loadTemplate.min.js" integrity="sha256-mF3k3rmuuGVi/6GhJ5atwMd7JsTsQhULB6GyLaFPrMU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.js" integrity="sha256-4hWBXlNNh9SqNDfISZkwRkKlWcxb1pxQNYsAPXCpGKs=" crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAllK8G0cYz4d596TCHCEiGWbDbF6HUJ-I&sensor=false&libraries=places"></script>
@@ -246,16 +256,6 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
         });
         //$("#service-results").loadTemplate($("#result-card-template"), [1]);
     </script>
-
-    <div class="footer">
-        <p>ENVIENTA @2020 All Rights reserved. | Background:
-        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@federicorespini?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Federico Respini"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Federico Respini</span></a>
-            <span style="display: inline-block; color:white; width: 50%; text-align: right;">
-                <a href="https://envienta.com/terms.html" target="_blank">Terms of Service </a><a href="https://envienta.com/privacy.html" target="_blank">| Private Policy</a>
-            </span>
-        </p>
-    </div>
-
 </body>
 
 </html>
