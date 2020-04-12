@@ -59,9 +59,8 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     </nav>
 
     <main role="main" class="container">
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-8">
                 <img style="display: block; margin:auto; margin-bottom: 1rem;" src="img/envienta_logo.png" />
                 <!--
                 <p class="main_info">
@@ -100,7 +99,6 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
                     <?php endforeach; ?>
                 </div>
             </div>
-            <div class="col-2"></div>
         </div>
 
         <p style="margin-top: 8rem;">
@@ -170,10 +168,10 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <script type="text/html" id="result-card-template">
         <div class="card mb-3 result-card" data-template-bind='[{"attribute": "data-url", "value": "url"}]'>
             <div class="row no-gutters">
-                <div class="col-md-3">
+                <div class="col-3">
                     <img class="card-img" alt="" data-template-bind='[{"attribute": "src", "value": "photoUrl"}]'>
                 </div>
-                <div class="col-md-9">
+                <div class="col-9">
                     <div class="card-body">
                         <h5 class="card-title result-title" data-content="title">Laszlo</h5>
                         <p class="card-text result-description" data-content="description">I'd love to mow the grass. If you are elderly or disabled,
