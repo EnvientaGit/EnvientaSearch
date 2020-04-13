@@ -61,7 +61,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <main role="main" class="container">
         <div class="row justify-content-md-center">
             <div class="col-lg-8">
-                <img style="display: block; margin:auto; margin-bottom: 1rem;" src="img/envienta_logo.png" />
+                <img style="display: block; margin:auto; margin-bottom: 1rem;" src="img/envienta.png" />
                 <!--
                 <p class="main_info">
                     We're Getting Ready to Launch.<br /> <a id="subscribe-button" href="#"> Join our mailing list </a> to stay in the loop.
