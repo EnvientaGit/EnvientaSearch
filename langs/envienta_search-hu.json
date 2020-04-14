@@ -5,5 +5,7 @@
 	"profile": "Profil",
 	"logoff": "Kijelentkezés",
 	"searchinput": "A helyi termékek és szolgáltatások keresése (kezd el írni a kulcsszót)",
-	"mce-EMAIL": "Rövidesen rajtolunk! Add meg az email címed, hogy értesíthessünk az indulásról!"
+	"launch-email": "Add meg az email címed, hogy értesíthessünk az indulásról!",
+	"allrights": "Minden jog fenntartva.",
+	"background": "Háttérkép:"
 }

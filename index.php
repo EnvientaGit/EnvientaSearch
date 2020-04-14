@@ -99,7 +99,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
                     <div id="mc_embed_signup">
                         <form action="https://envienta.us12.list-manage.com/subscribe/post?u=1cfb2999615d57f7f085b1680&amp;id=da900f432b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                             <div id="mc_embed_signup_scroll">
-                                <label for="mce-EMAIL" data-localize="mceemail">We're Getting Ready to Launch. Join our mailing list to stay in the loop.</label>
+                                <label for="mce-EMAIL" data-localize="launch-email">We're Getting Ready to Launch. Join our mailing list to stay in the loop.</label>
                                 <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1cfb2999615d57f7f085b1680_da900f432b" tabindex="-1" value=""></div>
                                 <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
@@ -115,7 +115,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     </main>
 
     <div class="footer">
-        <p>ENVIENTA @2020 All Rights reserved. | Background:
+        <p>ENVIENTA @2020 <span data-localize="allrights”>All Rights reserved.</span> | <span data-localize="background”>Background:</span>
             <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@federicorespini?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Federico Respini"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
                         <title>unsplash-logo</title>
                         <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
