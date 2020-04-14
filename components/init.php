@@ -178,4 +178,28 @@
             console.error('Submit profile', error);
         }
     });
+
+    $(".add-row").click(function() {
+        var linkValue = $("#profileLink").val();
+        var linkText = $("#profileLink option:selected").html();
+
+        var url = $("#profileURL").val();
+        var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + linkText + "</td><td>" + url + "</td></tr>";
+        $("#tblLinks tbody").append(markup);
+
+        $("#profileURL").val('');
+    });
+
+    // Find and remove selected table rows
+    $(".delete-row").click(function() {
+        $("#tblLinks tbody").find('input[name="record"]').each(function() {
+            if ($(this).is(":checked")) {
+                $(this).parents("tr").remove();
+            }
+        });
+    });
+
+    $(function() {
+        $("#tabs").tabs();
+    });
 </script>

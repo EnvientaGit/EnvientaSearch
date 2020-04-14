@@ -1,3 +1,6 @@
+var resultCardTemplate = Handlebars.compile($("#result-card-template").html());
+var activeTagTemplate = Handlebars.compile($("#active-tag-template").html());
+var inactiveTagTemplate = Handlebars.compile($("#inactive-tag-template").html());
 
 function initTagSearch(key, availableTags, cb, initialTaglist) {
     var previousValue = "";
@@ -20,15 +23,19 @@ function initTagSearch(key, availableTags, cb, initialTaglist) {
     }
 
     function renderTaglist() {
-        $("#" + key + "-taglist-active").loadTemplate($('#active-tag-template'), $.map(taglist, function (v) {
-            return { "tag": v };
+        $("#" + key + "-taglist-active").html(activeTagTemplate({
+            tags: $.map(taglist, function (v) {
+                return { "tag": v };
+            })
         }));
         var filteredTags = filterTags();
-        $("#" + key + "-taglist").loadTemplate($('#inactive-tag-template'), $.map(filteredTags, function (v, i) {
-            if (i == tagpos && searchInput.val())
-                return { "tag": v, style: "background-color: lightGrey;" };
-            return { "tag": v };
-        }).slice(0, 20));
+        $("#" + key + "-taglist").html(inactiveTagTemplate({
+            tags: $.map(filteredTags, function (v, i) {
+                if (i == tagpos && searchInput.val())
+                    return { "tag": v, style: "background-color: lightGrey;" };
+                return { "tag": v };
+            }).slice(0, 20)
+        }));
         $("#" + key + "-taglist > span").click(function () {
             var tag = $(this).data('tag');
             var idx = taglist.indexOf(tag);
@@ -102,13 +109,6 @@ function initTagSearch(key, availableTags, cb, initialTaglist) {
     renderTaglist();
 }
 
-$.addTemplateFormatter("KeywordsFormatter", function (value, template) {
-    var tags = value.split(" ");
-    return $.map(tags, function (v) {
-        return '<span class="badge badge-primary tag-badge">' + v + '</span>'
-    });
-});
-
 function initTab(key, availableTags) {
     initTagSearch(key, availableTags, async function (taglist) {
         var baseLat = localStorage.getItem("baseLat");
@@ -149,10 +149,13 @@ function initTab(key, availableTags) {
             } else {
                 $('#' + key + "-paginator > .prevButton").hide();
             }
-            $('#' + key + "-results").loadTemplate($("#result-card-template"), $.map(data, function (v) {
-                if (!v.photoUrl)
-                    v.photoUrl = "img/profile.jpg";
-                return v;
+            $('#' + key + "-results").html(resultCardTemplate({
+                results: $.map(data, function (v) {
+                    if (!v.photoUrl)
+                        v.photoUrl = "img/profile.jpg";
+                    v.keywords = v.service.split(" ");
+                    return v;
+                })
             }));
             $(".result-card").click(function () {
                 var url = $(this).attr('data-url');

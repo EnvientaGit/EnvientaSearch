@@ -23,10 +23,6 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="x-icon">
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -37,7 +33,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a id="howitworks-menu" class="nav-link" href="#">How it works? |</span></a>
+                    <a id="howitworks-menu" class="nav-link" href="#">How it works? |</a>
                 </li>
                 <li class="nav-item">
                     <a id="whoweare-menu" class="nav-link" href="#">Who we are?</a>
@@ -87,7 +83,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
                                 <input id="<?= $resource_type->key ?>-search-input" type="text" class="form-control search-edit" placeholder="Search for local products / services (start typing a keyword)" aria-label="Start typing a keyword, then click + to add it to the list" aria-describedby="<?= $resource_type->key ?>-button-addon4" autocomplete="off">
                             </div>
                             <div style="height: 1rem;"></div>
-                            <span id="<?= $resource_type->key ?>-taglist-active"></span><br/>
+                            <span id="<?= $resource_type->key ?>-taglist-active"></span><br />
                             <span id="<?= $resource_type->key ?>-taglist"></span>
                             <div style="height: 1rem;"></div>
                             <div id="<?= $resource_type->key ?>-results"></div>
@@ -125,7 +121,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
 
     <div class="footer">
         <p>ENVIENTA @2020 All Rights reserved. | Background:
-            <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@federicorespini?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Federico Respini"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
+            <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@federicorespini?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Federico Respini"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
                         <title>unsplash-logo</title>
                         <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
                     </svg></span><span style="display:inline-block;padding:2px 3px">Federico Respini</span></a>
@@ -136,58 +132,60 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     </div>
 
 
-        <?php include("components/login-modal.php"); ?>
+    <?php include("components/login-modal.php"); ?>
 
-        <?php include("components/map-target-modal.php"); ?>
+    <?php include("components/map-target-modal.php"); ?>
 
-        <?php include("components/whoweare-modal.php"); ?>
+    <?php include("components/whoweare-modal.php"); ?>
 
-        <?php include("components/howitworks-modal.php"); ?>
+    <?php include("components/howitworks-modal.php"); ?>
 
-        <?php include("components/profile-modal.php"); ?>
+    <?php include("components/profile-modal.php"); ?>
 
-    <script type="text/html" id="tag-template">
-        <span class="badge badge-primary" style="margin-right: 0.25rem;">
-            <span data-content="tag"></span>
-            <span data-template-bind='[{"attribute": "data-tag", "value": "tag"}]' data-role="remove-tag" style="cursor: default;"> x</span>
-        </span>
-    </script>
-
-    <script type="text/html" id="inactive-tag-template">
-        <span class="badge badge-light tag-badge" data-template-bind='[{"attribute": "data-tag", "value": "tag"},{"attribute": "style", "value": "style"}]'>
-            <span data-content="tag"></span>
-        </span>
-    </script>
-
-    <script type="text/html" id="active-tag-template">
-        <span class="badge badge-primary tag-badge" data-template-bind='[{"attribute": "data-tag", "value": "tag"}]'>
-            <span data-content="tag"></span>
-        </span>
-    </script>
-
-    <script type="text/html" id="result-card-template">
-        <div class="card mb-3 result-card" data-template-bind='[{"attribute": "data-url", "value": "url"}]'>
-            <div class="row no-gutters">
-                <div class="col-3">
-                    <img class="card-img" alt="" data-template-bind='[{"attribute": "src", "value": "photoUrl"}]'>
-                </div>
-                <div class="col-9">
-                    <div class="card-body">
-                        <h5 class="card-title result-title" data-content="title">Laszlo</h5>
-                        <p class="card-text result-description" data-content="description">I'd love to mow the grass. If you are elderly or disabled,
-                            just let me know. I'm here to help.</p>
-                        <p class="card-text" data-innerHTML="service" data-format="KeywordsFormatter">
-                            <span class="badge badge-primary tag-badge">lawncutting</span>
-                            <span class="badge badge-primary tag-badge">grasscutting</span>
-                            <span class="badge badge-primary tag-badge">volunteer</span>
-                        </p>
+    <script type="text/x-handlebars-template" id="result-card-template">
+        {{#each results}}
+            <div class="card mb-3 result-card" data-url="{{url}}">
+                <div class="row no-gutters">
+                    <div class="col-3">
+                        <img class="card-img" alt="" src="{{photoUrl}}">
+                    </div>
+                    <div class="col-9">
+                        <div class="card-body">
+                            <h5 class="card-title result-title">{{title}}</h5>
+                            <p class="card-text result-description">{{description}}</p>
+                            <p class="card-text">
+                                {{#each keywords}}
+                                    <span class="badge badge-primary tag-badge">{{this}}</span>
+                                {{/each}}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        {{/each}}
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.loadtemplate/1.5.10/jquery.loadTemplate.min.js" integrity="sha256-mF3k3rmuuGVi/6GhJ5atwMd7JsTsQhULB6GyLaFPrMU=" crossorigin="anonymous"></script>
+    <script type="text/x-handlebars-template" id="inactive-tag-template">
+        {{#each tags}}
+            <span class="badge badge-light tag-badge" data-tag="{{tag}}" style="{{style}}">
+                <span>{{tag}}</span>
+            </span>
+        {{/each}}
+    </script>
+
+    <script type="text/x-handlebars-template" id="active-tag-template">
+        {{#each tags}}
+            <span class="badge badge-primary tag-badge" data-tag="{{tag}}">
+                <span>{{tag}}</span>
+            </span>
+        {{/each}}
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha256-usTqAE1ywvdMtksWzdeWzD75MsfJN0h0U7y2NtZL3N0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.js" integrity="sha256-4hWBXlNNh9SqNDfISZkwRkKlWcxb1pxQNYsAPXCpGKs=" crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAllK8G0cYz4d596TCHCEiGWbDbF6HUJ-I&sensor=false&libraries=places"></script>
     <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
@@ -200,58 +198,6 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <?php include("components/init.php"); ?>
 
     <script>
-        $(document).ready(function() {
-            $(".add-row").click(function() {
-                var linkValue = $("#profileLink").val();
-                var linkText = $("#profileLink option:selected").html();
-
-                var url = $("#profileURL").val();
-                var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + linkText + "</td><td>" + url + "</td></tr>";
-                $("#tblLinks tbody").append(markup);
-
-                $("#profileURL").val('');
-            });
-
-            // Find and remove selected table rows
-            $(".delete-row").click(function() {
-                $("#tblLinks tbody").find('input[name="record"]').each(function() {
-                    if ($(this).is(":checked")) {
-                        $(this).parents("tr").remove();
-                    }
-                });
-            });
-
-            $('#profileForm').submit(function(e) {
-                e.preventDefault();
-                //alert('hi');
-                //console.log($(this).serialize());
-                //     $.ajax({
-                //         type: "POST",
-                //         url: 'login.php',
-                //         data: $(this).serialize(),
-                //         success: function(response)
-                //         {
-                //             var jsonData = JSON.parse(response);
-
-                //             // user is logged in successfully in the back-end
-                //             // let's redirect
-                //             if (jsonData.success == "1")
-                //             {
-                //                 location.href = 'my_profile.php';
-                //             }
-                //             else
-                //             {
-                //                 alert('Invalid Credentials!');
-                //             }
-                //     }
-                // });
-            });
-            $(function() {
-                $("#tabs").tabs();
-            });
-
-        });
-
         $('.search-edit').popover({
             trigger: 'focus',
             placement: "top",
