@@ -104,7 +104,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
                     <div id="mc_embed_signup">
                         <form action="https://envienta.us12.list-manage.com/subscribe/post?u=1cfb2999615d57f7f085b1680&amp;id=da900f432b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                             <div id="mc_embed_signup_scroll">
-                                <label for="mce-EMAIL">We're Getting Ready to Launch. Join our mailing list to stay in the loop.</label>
+                                <label for="mce-EMAIL" data-localize="mce-EMAL">We're Getting Ready to Launch. Join our mailing list to stay in the loop.</label>
                                 <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1cfb2999615d57f7f085b1680_da900f432b" tabindex="-1" value=""></div>
                                 <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
