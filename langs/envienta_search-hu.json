@@ -4,6 +4,6 @@
 	"signup": "Regisztráció / Bejelentkezés",
 	"profile": "Profil",
 	"logoff": "Kijelentkezés",
-	"searchinput": "A helyi termékek és szolgáltatások keresése (kezd el írni a kulcsszót)"
-	"mce-EMAIL": "Nemsokára élesítjük a rendszert. Add meg az email címed, hogy értesíthessünk az indulásról!"
+	"searchinput": "A helyi termékek és szolgáltatások keresése (kezd el írni a kulcsszót)",
+	"mceemail": "Nemsokára élesítjük a rendszert. Add meg az email címed, hogy értesíthessünk az indulásról!"
 }

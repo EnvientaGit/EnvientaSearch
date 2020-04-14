@@ -59,11 +59,6 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
             <div class="col-lg-8">
                 <img style="display: block; margin:auto; margin-bottom: 1rem;" src="img/envienta.png" />
                 <!--
-                <p class="main_info">
-                    We're Getting Ready to Launch.<br /> <a id="subscribe-button" href="#"> Join our mailing list </a> to stay in the loop.
-                </p>
-                -->
-                <!--
                 <ul class="nav nav-pills mb-3" id="resource-pills-tab" role="tablist">
                     <?php foreach ($resource_types as $idx => $resource_type) : ?>
                         <li class="nav-item">
@@ -104,7 +99,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
                     <div id="mc_embed_signup">
                         <form action="https://envienta.us12.list-manage.com/subscribe/post?u=1cfb2999615d57f7f085b1680&amp;id=da900f432b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                             <div id="mc_embed_signup_scroll">
-                                <label for="mce-EMAIL" data-localize="mce-EMAL">We're Getting Ready to Launch. Join our mailing list to stay in the loop.</label>
+                                <label for="mce-EMAIL" data-localize="mceemail">We're Getting Ready to Launch. Join our mailing list to stay in the loop.</label>
                                 <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1cfb2999615d57f7f085b1680_da900f432b" tabindex="-1" value=""></div>
                                 <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
