@@ -21,6 +21,8 @@ main {
 
 .result-description {
     font-size: 75%;
+    height: 3.1em;
+    overflow-y: hidden;
 }
 
 .main_info {

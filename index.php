@@ -33,21 +33,21 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a id="howitworks-menu" class="nav-link" href="#">How it works? |</a>
+                    <a id="howitworks-menu" class="nav-link" href="#"><span data-localize="howitworks">How it works?</span> |</a>
                 </li>
                 <li class="nav-item">
-                    <a id="whoweare-menu" class="nav-link" href="#">Who we are?</a>
+                    <a id="whoweare-menu" class="nav-link" href="#"><span data-localize="whoweare">Who we are?</span></a>
                 </li>
                 <li id="loginContainer" class="nav-item">
-                    <a id="loginButton" class="nav-link loginButton" href="#">| Sign Up / Sign In</a>
+                    <a id="loginButton" class="nav-link loginButton" href="#">| <span data-localize="signup">Sign Up / Sign In</span></a>
                 </li>
                 <li id="userContainer" class="nav-item" style="display: none;">
                     <a id="userButton" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img id="profileImage" width="40" height="40" class="d-inline-block align-top profile-image" />
                     </a>
                     <div class="dropdown-menu profileDropDown" aria-labelledby="userButton">
-                        <a class="dropdown-item profileButton" href="#">Profile</a>
-                        <a class="dropdown-item logoutButton" href="#">Log Off</a>
+                        <a class="dropdown-item profileButton" href="#"><span data-localize="profile">Profile</span></a>
+                        <a class="dropdown-item logoutButton" href="#"><span data-localize="logoff">Log Off</span></a>
                     </div>
                 </li>
             </ul>
@@ -80,7 +80,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
                                 <div class="input-group-prepend" id="<?= $resource_type->key ?>-button-addon4">
                                     <button id="<?= $resource_type->key ?>-add-tag" class="btn btn-secondary mapTargetButton" type="button"><i class="fas fa-map-marker-alt"></i></button>
                                 </div>
-                                <input id="<?= $resource_type->key ?>-search-input" type="text" class="form-control search-edit" placeholder="Search for local products / services (start typing a keyword)" aria-label="Start typing a keyword, then click + to add it to the list" aria-describedby="<?= $resource_type->key ?>-button-addon4" autocomplete="off">
+                                <input id="<?= $resource_type->key ?>-search-input" type="text" class="form-control search-edit" data-localize="searchinput" placeholder="Search for local products / services (start typing a keyword)" aria-label="Start typing a keyword, then click + to add it to the list" aria-describedby="<?= $resource_type->key ?>-button-addon4" autocomplete="off">
                             </div>
                             <div style="height: 1rem;"></div>
                             <span id="<?= $resource_type->key ?>-taglist-active"></span><br />
@@ -130,7 +130,6 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
             </span>
         </p>
     </div>
-
 
     <?php include("components/login-modal.php"); ?>
 
@@ -185,6 +184,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localize/0.1.0/jquery.localize.min.js" integrity="sha256-zTr9AlJ1gxy4jC5amkrL/4Re/HsZKSq28jWfcFhzhaw=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha256-usTqAE1ywvdMtksWzdeWzD75MsfJN0h0U7y2NtZL3N0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.js" integrity="sha256-4hWBXlNNh9SqNDfISZkwRkKlWcxb1pxQNYsAPXCpGKs=" crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAllK8G0cYz4d596TCHCEiGWbDbF6HUJ-I&sensor=false&libraries=places"></script>
@@ -198,6 +198,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <?php include("components/init.php"); ?>
 
     <script>
+        $("[data-localize]").localize("envienta_search", {pathPrefix: "langs"});
         $('.search-edit').popover({
             trigger: 'focus',
             placement: "top",

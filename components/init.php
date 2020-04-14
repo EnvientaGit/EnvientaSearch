@@ -202,4 +202,8 @@
     $(function() {
         $("#tabs").tabs();
     });
+
+    $("[data-tr]").each(function(){
+        $(this).html($(this).attr("data-tr"));
+    });
 </script>
