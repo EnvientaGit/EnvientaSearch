@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">ENVIENTA Profile</h5>
+                <h5 class="modal-title">ENVIENTA <span data-localize="profile">Profile</span></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -11,50 +11,50 @@
                 <div class="modal-body">
                     <div id="tabs">
                         <ul>
-                            <li><a href="#tabs-1">Basic Info</a></li>
-                            <li><a href="#tabs-2">Location</a></li>
-                            <li><a href="#tabs-3">Social Links</a></li>
-                            <li><a href="#tabs-4">Keywords</a></li>
-                            <li><a href="#tabs-5">Crypto Addresses</a></li>
+                            <li><a href="#tabs-1"><span data-localize="basicinfo">Basic Info</span></a></li>
+                            <li><a href="#tabs-2"><span data-localize="location">Location</span></a></li>
+                            <li><a href="#tabs-3"><span data-localize="sociallinks">Social Links</span></a></li>
+                            <li><a href="#tabs-4"><span data-localize="keywords">Keywords</span></a></li>
+                            <li><a href="#tabs-5"><span data-localize="cryptoaddresses">Crypto Addresses</span></a></li>
                         </ul>
                         <div id="tabs-1">
                             <div class="form-group">
-                                <label for="profileName">Display Name</label>
+                                <label for="profileName"><span data-localize="profilename">Display Name</span></label>
                                 <input type="text" class="form-control" id="profileName">
                             </div>
                             <div class="form-group">
-                                <label for="profileFirstName">First Name</label>
+                                <label for="profileFirstName"><span data-localize="firstname">First Name</span></label>
                                 <input type="text" class="form-control" id="profileFirstName">
                             </div>
                             <div class="form-group">
-                                <label for="profileLastName">Last Name</label>
+                                <label for="profileLastName"><span data-localize="lastname">Last Name</span></label>
                                 <input type="text" class="form-control" id="profileLastName">
                             </div>
                             <div class="form-group">
-                                <label for="profileEmail">Email</label>
+                                <label for="profileEmail"><span data-localize="email">Email</span></label>
                                 <input type="text" class="form-control" id="profileEmail">
                             </div>
 
                             <div class="form-group">
-                                <label for="profileDescription">About Me</label>
+                                <label for="profileDescription"><span data-localize="aboutme">About Me</span></label>
                                 <textarea class="form-control" id="profileDescription" rows="6"></textarea>
                             </div>
                         </div>
                         <div id="tabs-2">
                             <div class="form-group">
-                                <label for="profileAddress">Your location</label>
+                                <label for="profileAddress"><span data-localize="location">Location</span></label>
                                 <input type="text" class="form-control" id="profileAddress" aria-describedby="profileAddressHelp">
-                                <small id="profileAddressHelp" class="form-text text-muted"><strong>Start typing your address, then press ENTER to position the marker on the map. You can refine it by moving the marker.</strong></small>
+                                <small id="profileAddressHelp" class="form-text text-muted"><strong><span data-localize="typeaddress">Start typing your address, then press ENTER to position the marker on the map. You can refine it by moving the marker.Your address will be not public.</span></strong></small>
                                 <div id="profile-map-canvas" class="map_canvas"></div>
                             </div>
                         </div>
                         <div id="tabs-3">
                             <div class="form-group">
                                 <select class="form-control" id="profileLink">
-                                    <option value="1">Website</option>
-                                    <option value="2">LinkedIn</option>
+                                    <option value="1"><span data-localize="website">Website</span></option>
+                                    <option value="2">Facebook</option>
                                     <option value="3">Twitter</option>
-                                    <option value="4">Facebook</option>
+                                    <option value="4">LinkedIn</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -78,8 +78,8 @@
                         </div>
                         <div id="tabs-4">
                             <div class="form-group">
-                                Keywords<br />
-                                <small>You have to set at least one keyword if you want to be searchable in our local search engine.</small>
+                                <span data-localize="keywords">Keywords</span><br />
+                                <small><span data-localize="setupkeywords">You have to set at least one keyword if you want to be searchable in our local search engine.</span></small>
                             </div>
                             <?php foreach ($resource_types as $idx => $resource_type) : ?>
                                 <div class="form-group">
@@ -97,17 +97,17 @@
                         </div>
                         <div id="tabs-5">
                             <div class="form-group">
-                                <label for="profileENV">ENV Wallet Address</label>
+                                <label for="profileENV">ENV <span data-localize="walletaddress">Wallet Address</span></label>
                                 <input type="text" class="form-control" id="profileENV">
 
                             </div>
                             <div class="form-group">
-                                <label for="profileBTC">BTC Wallet Address</label>
+                                <label for="profileBTC"><span data-localize="walletaddress">BTC Wallet Address</span></label>
                                 <input type="text" class="form-control" id="profileBTC">
 
                             </div>
                             <div class="form-group">
-                                <label for="profileETH">ETH Wallet Address</label>
+                                <label for="profileETH"><span data-localize="walletaddress">ETH Wallet Address</span></label>
                                 <input type="text" class="form-control" id="profileETH">
 
                             </div>
@@ -117,8 +117,8 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button id="profileSaveButton" type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><span data-localize="cancel">Cancel</span></button>
+                        <button id="profileSaveButton" type="submit" class="btn btn-primary"><span data-localize="save">Save</span></button>
                     </div>
             </form>
         </div>
