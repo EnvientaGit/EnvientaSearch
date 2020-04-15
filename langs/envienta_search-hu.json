@@ -7,5 +7,10 @@
 	"searchinput": "A helyi termékek és szolgáltatások keresése (kezd el írni a kulcsszót)",
 	"launch-email": "Add meg az email címed, hogy értesíthessünk az indulásról!",
 	"allrights": "Minden jog fenntartva.",
-	"background": "Háttérkép:"
+	"background": "Háttérkép:",
+	"selectlocation": "Jelöld ki a tartózkodási helyét!",
+	"typeaddress": "Kezd el beírni a címed és nyomj egy ENTER-t, hogy a marker megjelenjen a térképen. A pozíciót ennek mozgatásával finomítanu tudod. Mi nem tároljul le a tartózkodási helyed.",
+	"enteringaddress": "A cím megadása azért fontos, hogy a keresőmotor csak a számodra legközelebbi találatokat listázza csak ki.",
+	"save": "Mentés",
+	"cancel": "Mégse"
 }
