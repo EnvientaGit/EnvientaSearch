@@ -23,14 +23,17 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="x-icon">
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-63687947-5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-63687947-5');
-</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63687947-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-63687947-5');
+    </script>
 </head>
 
 <body>
@@ -129,7 +132,7 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
                         <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
                     </svg></span><span style="display:inline-block;padding:2px 3px">Federico Respini</span></a>
             <span style="display: inline-block; color:white; width: 50%; text-align: right;">
-                <a href="https://envienta.com/terms.html" target="_blank">Terms of Service </a><a href="https://envienta.com/privacy.html" target="_blank">| Private Policy</a>
+                <a href="https://envienta.com/terms.html" target="_blank"><span data-localize="termsofservice">Terms of Service</span> </a><a href="https://envienta.com/privacy.html" target="_blank">| <span data-localize="privacypolicy">Private Policy</span></a>
             </span>
         </p>
     </div>
@@ -201,7 +204,9 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <?php include("components/init.php"); ?>
 
     <script>
-        $("[data-localize]").localize("envienta_search", {pathPrefix: "langs"});
+        $("[data-localize]").localize("envienta_search", {
+            pathPrefix: "langs"
+        });
         $('.search-edit').popover({
             trigger: 'focus',
             placement: "top",
