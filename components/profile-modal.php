@@ -102,12 +102,12 @@
 
                             </div>
                             <div class="form-group">
-                                <label for="profileBTC"><span data-localize="walletaddress">BTC Wallet Address</span></label>
+                                <label for="profileBTC">BTC <span data-localize="walletaddress">Wallet Address</span></label>
                                 <input type="text" class="form-control" id="profileBTC">
 
                             </div>
                             <div class="form-group">
-                                <label for="profileETH"><span data-localize="walletaddress">ETH Wallet Address</span></label>
+                                <label for="profileETH">ETH <span data-localize="walletaddress">Wallet Address</span></label>
                                 <input type="text" class="form-control" id="profileETH">
 
                             </div>
