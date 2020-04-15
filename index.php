@@ -23,6 +23,14 @@ $keywords = json_decode(file_get_contents("config/keywords.json"), TRUE);
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="x-icon">
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-63687947-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-63687947-5');
+</script>
 </head>
 
 <body>
