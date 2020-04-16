@@ -62,19 +62,12 @@
                             </div>
                             <input type="button" class="add-row" value="Add Link">
                             <table id="tblLinks">
-                                <thead>
-                                    <tr>
-                                        <th>Select</th>
-                                        <th>Link Name</th>
-                                        <th>URL</th>
-                                    </tr>
-                                </thead>
+                                
                                 <tbody>
 
                                 </tbody>
                             </table>
                             <input type="button" class="delete-row" value="Remove Link">
-
                         </div>
                         <div id="tabs-4">
                             <div class="form-group">
